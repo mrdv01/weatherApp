@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(peakpx.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 1s ease-in;
+        }
+
+        .formcard {
+
+
+            width: 300px;
+            height: 500px;
+            padding: 0 12px;
+            border-radius: 300px / 250px;
+            position: relative;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        #get {
+            font-family: 'Muli', sans-serif;
+            padding: 8px 12px;
+            border: 1px solid white;
+            border-radius: 12px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        #location {
+            font-family: 'Muli', sans-serif;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 8px 12px;
+            outline: none;
+            color: white;
+        }
+
+        #weatherForm {
+
+            position: absolute;
+            top: 20%;
+            left: 4px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formcard">
+        <form action="" id="weatherForm">
+            <input type="text" name="location" id="location" placeholder="enter city">
+            <button id="get">get weather</button>
+        </form>
+        <div class="weather-container">
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
